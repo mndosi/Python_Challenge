@@ -15,19 +15,23 @@ with open (bank_csvpath, 'r') as budget_file:
     print(f"Header:{ csv_header}")
 
 #read the header row first, then read through each row of the file
-    # csv_header2 = next(csv_reader)
-    # result = [csv_reader(c) for c in row] for row in csv_reader]
-    # #for i, header_name in enumerate(result):
-    #     #print (csv_header2, [row[i] for row in result])
+    csv_header2 = next(csv_reader)
+    result = [row for row in csv_reader]
+    list_month = []
+    for i, header_name in enumerate(result):
+        #print([row[i] for row in result])
+        #print(header_name)
+        list_month.append(header_name[0])
+    print("Total months= " + str(len(list_month)))
 
 #Get the total number of months included in the dataset
-    x = 0
-    Ttl_mon = [x]
-    for row in csv_reader:
-        if row([1] != ""):
-        x = x+1
-        else:
-            print("Total months= " & ((Ttl_mon)-1))
+
+    list_profloss = []
+    for i, header_name in enumerate(result):
+        list_profloss.append(header_name[1])
+        def total_prof(csv_reader: 2):
+            Total_prof = sum[list_profloss]
+        print("The Total profit for the period was " + str(Total_prof))
 
 # Bank_budget = ["budget_file"]
 # print (len(budget_file))
