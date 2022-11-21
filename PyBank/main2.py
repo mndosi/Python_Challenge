@@ -21,13 +21,13 @@ with open (bank_csvpath, 'r') as budget_file:
     #     #print (csv_header2, [row[i] for row in result])
 
 #Get the total number of months included in the dataset
-x = 0
-Ttl_mon = [x]
-for row in csv_reader:
-    if row([1] != ""):
+    x = 0
+    Ttl_mon = [x]
+    for row in csv_reader:
+        if row([1] != ""):
         x = x+1
-    else:
-        print (x-1)
+        else:
+            print("Total months= " & ((Ttl_mon)-1))
 
 # Bank_budget = ["budget_file"]
 # print (len(budget_file))

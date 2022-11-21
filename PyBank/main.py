@@ -34,7 +34,7 @@ while x < row_count:
 print("Financial Analysis")
 print("------------------------------------------------")
 print("Total Months: ", total_months)
-print("Total Change: ", net_Total)
+print("Total Change: ", net_total)
 print("Average Change: " ,avg_change)
 print("Maximum increase in Profits: ", max_increase)
 print("Maximum decrease in Profits: ", max_decrease)
