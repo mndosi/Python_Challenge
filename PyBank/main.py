@@ -12,23 +12,21 @@ with open (bank_csvpath, 'r') as budget_file:
     #read the header row first, then read through each row of the file
     csv_headers = next(csvreader)
     result = [[list(c) for c in row] for row in csvreader]
-    for i, header_name in enumerate(result)
+    for i, header_name in enumerate(result):
         print (header_name, [row[i] for row in result])
 
 row_count = len(result)
 x = 0
 net_total = []
-def net_total(Profit/Losses)
-
-for p_l in Profit/Losses
-    net_total.append(net_total[x + (x+1)]
+def net_total():["Profit/Losses"]
+net_total.append(net_total[x + (x+1)])
 
  # get total number of months
 while x < row_count:
     x = 0
     total_months = row_count - 1 
     net_total += int(result[1,x])
-    net_change = row[x - (x-1)]:
+    net_change = row_count([x - (x-1)])
     avg_change = net_change / total_months
     max_increase = max.int(net_change)
     max_decrease = min.int(net_change)
