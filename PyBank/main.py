@@ -3,7 +3,7 @@ from logging import logProcesses
 import os 
 from os import path
 import csv
-bank_csvpath = os.path.join('Resources', 'budget_data.csv')
+bank_csvpath = os.path.join('..', 'Resources', 'budget_data.csv')
 #C:\Users\MankweNdosi\ClassActivities\Python_Challenge\PyBank\Resources\budget_data.csv
 
 #open and read csv
@@ -11,9 +11,9 @@ with open (bank_csvpath, 'r') as budget_file:
     csvreader = csv.reader(budget_file, delimiter = ",")
     #read the header row first, then read through each row of the file
     csv_headers = next(csvreader)
-    result = [[list(c) for c in row] for row in csvreader]
+    result = [[csvreader(c) for c in row] for row in csvreader]
     for i, header_name in enumerate(result):
-        print (header_name, [row[i] for row in result])
+        print (header_name, [row[c] for row in result])
 
 row_count = len(result)
 x = 0

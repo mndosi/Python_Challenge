@@ -27,7 +27,7 @@ for row in csv_reader:
     if row([1] != ""):
         x = x+1
     else:
-        print (Ttl_mon)
+        print (x-1)
 
 # Bank_budget = ["budget_file"]
 # print (len(budget_file))
