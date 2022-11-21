@@ -29,7 +29,7 @@ with open (bank_csvpath, 'r') as budget_file:
     list_profloss = []
     for i, header_name in enumerate(result):
         list_profloss.append(header_name[1])
-        def total_prof(csv_reader: 2):
+        def total_prof(csv_reader.sum[2]):
             Total_prof = sum[list_profloss]
         print("The Total profit for the period was " + str(Total_prof))
 
