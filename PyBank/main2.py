@@ -32,7 +32,8 @@ with open (bank_csvpath, 'r') as budget_file:
         def total_prof(list_profloss):
             final_prof = sum(list_profloss)
             return total_prof
-    print("The Total profit for the period was " & total_prof)
+    print("Total profit for the period was " + (final_prof.str))
+
 
 # Bank_budget = ["budget_file"]
 # print (len(budget_file))
