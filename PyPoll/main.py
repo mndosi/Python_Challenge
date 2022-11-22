@@ -6,7 +6,7 @@ from itertools import count
 import os 
 from os import path
 import csv
-i = 0
+
 elections_csv = os.path.join("Resources","election_data.csv")
 def votes_tally(i, ballot_ID, Candidates):
 
