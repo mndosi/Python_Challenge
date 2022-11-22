@@ -41,21 +41,5 @@ print(f"Greatest Decrease = ${greatest_decrease}")
 
 
 
-#Get the total number of months included in the dataset
-
-        
-        #Iterate each element in list
-# and add them in variable total
-    #     total = total + prof_loss[1]
-    # print("Total Profit = " + str(total))
- 
-# printing total value
-
-    
-
-
-# Bank_budget = ["budget_file"]
-# print (len(budget_file))
-
 
 
