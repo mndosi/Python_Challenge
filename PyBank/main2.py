@@ -19,20 +19,20 @@ with open (bank_csvpath) as budget_file:
     result = [row for row in csv_reader]
     list_month = []
     for i, header_name in enumerate(result):
-        #print([row[i] for row in result])
-        #print(header_name)
         list_month.append(header_name[0])
     print("Total months = " + str(len(list_month)))
 
 #Get the total number of months included in the dataset
+    
+    result = [row for row in csv_reader]
+    prof_loss = ['Profit/Losses'[i]]
     total = 0
-    list_profloss = []
-    for i in range(0, len(list_profloss)):
-        list_profloss.append('Profit/Losses'[1])
+    for i in range(0, len(result)):
+        prof_loss.append('Profit/Losses'[i])
         #Iterate each element in list
 # and add them in variable total
-        total = total + list_profloss[i]
-        print("Total Profit " + total)
+        total = total + prof_loss[i]
+    print("Total Profit = " + str(total))
  
 # printing total value
 
