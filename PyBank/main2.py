@@ -15,24 +15,39 @@ with open (bank_csvpath) as budget_file:
     print(f"Header:{ csv_header}")
 
 #read the header row first, then read through each row of the file
-    csv_header2 = next(csv_reader)
-    result = [row for row in csv_reader]
-    list_month = []
-    for i, header_name in enumerate(result):
-        list_month.append(header_name[0])
-    print("Total months = " + str(len(list_month)))
+    prof_loss = []
+    changes = []
+    p = 0
+    n = 0
+    for row in csv_reader:
+        prof_loss.append(int(row[1]))
+        n = int(row[1])
+        changes.append(n-p)
+        p = int(row[1])
+    Total = sum(prof_loss)
+    changes = changes[1:]
+    average = sum(changes) / len(changes)
+    greatest_increase = max(changes)
+    greatest_decrease = min(changes)
+
+
+print("Financial Analysis")        
+print("-------------------------------------------------")
+print(f"Total months = {len(prof_loss)}")
+print(f"Total Profit =  ${Total}")
+print(f"Average Change = ${average}")
+print(f"Greatest Increase = ${greatest_increase}")
+print(f"Greatest Decrease = ${greatest_decrease}")
+
+
 
 #Get the total number of months included in the dataset
-    
-    result = [row for row in csv_reader]
-    prof_loss = ['Profit/Losses'[i]]
-    total = 0
-    for i in range(0, len(result)):
-        prof_loss.append('Profit/Losses'[i])
+
+        
         #Iterate each element in list
 # and add them in variable total
-        total = total + prof_loss[i]
-    print("Total Profit = " + str(total))
+    #     total = total + prof_loss[1]
+    # print("Total Profit = " + str(total))
  
 # printing total value
 
