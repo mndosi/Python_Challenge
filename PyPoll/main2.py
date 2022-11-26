@@ -18,7 +18,7 @@ with open (elections_csv) as elections_file:
 
     #read the header row first, then read through each row of the file
     ballots = []
-    candidates = [row[2]]
+    candidates = []
     #votes_per_candidate = []
     for row in csv_reader:
         ballots.append(row[0])
